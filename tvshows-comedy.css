@@ -1,0 +1,12 @@
+/* Comedy TV Shows page specific styles */
+section {
+    margin-bottom: 2rem;
+    background: #fffbe7;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(156,156,51,0.06);
+}
+section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}

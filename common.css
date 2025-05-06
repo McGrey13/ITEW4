@@ -1,0 +1,129 @@
+/* Common styles shared across all pages */
+:root {
+    --primary-color: rgb(156, 51, 51);
+    --text-dark: #333;
+    --text-light: #fff;
+    --bg-light: #f9f9f9;
+    --bg-dark: #121212;
+    --fluid-min-width: 320;
+    --fluid-max-width: 1200;
+    --fluid-min-size: 16;
+    --fluid-max-size: 20;
+    --fluid-min-scale: 1.2;
+    --fluid-max-scale: 1.333;
+}
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: clamp(
+        var(--fluid-min-size) * 1px,
+        calc(1rem + ((1vw - var(--fluid-min-width) * 0.01px) * var(--fluid-max-size))),
+        var(--fluid-max-size) * 1px
+    );
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+header h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(0.5rem, 2vw, 1.5rem);
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content */
+.container {
+    width: min(90%, 1200px);
+    margin-inline: auto;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: clamp(1rem, 3vw, 2rem);
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    margin-top: 2rem;
+}
+
+/* Responsive Images */
+.responsive-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-dark: #e0e0e0;
+        --text-light: #fff;
+        --bg-light: #121212;
+    }
+}
