@@ -1,0 +1,185 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fluid Typography */
+:root {
+    --fluid-min-width: 320;
+    --fluid-max-width: 1200;
+    --fluid-min-size: 16;
+    --fluid-max-size: 20;
+    --fluid-min-scale: 1.2;
+    --fluid-max-scale: 1.333;
+}
+
+/* Base styles with fluid typography */
+html {
+    font-size: clamp(
+        var(--fluid-min-size) * 1px,
+        calc(1rem + ((1vw - var(--fluid-min-width) * 0.01px) * var(--fluid-max-size))),
+        var(--fluid-max-size) * 1px
+    );
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Flexible Layout */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+    width: min(90%, 1200px);
+    margin-inline: auto;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+/* Header with Responsive Design */
+header {
+    background-color: rgb(156, 51, 51);
+    color: white;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+header h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Navigation */
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(0.5rem, 2vw, 1.5rem);
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Adaptive Sections */
+section {
+    background-color: white;
+    border-radius: clamp(0.5rem, 2vw, 1rem);
+    padding: clamp(1rem, 3vw, 2rem);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Adaptive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.responsive-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+/* Sidebar */
+aside {
+    background-color: #eee;
+    padding: clamp(1rem, 3vw, 2rem);
+    border-radius: clamp(0.5rem, 2vw, 1rem);
+}
+
+aside ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+aside li {
+    padding: 0.5em 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: clamp(1rem, 3vw, 2rem);
+    background-color: rgb(156, 51, 51);
+    color: white;
+    margin-top: 2rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 769px) {
+    aside {
+        grid-column: span 2;
+    }
+    
+    section {
+        transition: transform 0.3s ease;
+    }
+    
+    section:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+    
+    section {
+        background-color: #1e1e1e;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    aside {
+        background-color: #2d2d2d;
+    }
+}
