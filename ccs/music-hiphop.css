@@ -1,0 +1,38 @@
+/* Hip-Hop music page specific styles */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    color: black;
+}
+
+section {
+    margin-bottom: 2rem;
+    background: #f7f0ff;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(156,51,156,0.06);
+}
+section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.list-group-item {
+    font-size: 1.1rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.list-group-item:hover {
+    background: #e3342f;
+    color: #fff;
+}
+
+footer {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
