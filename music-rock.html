@@ -9,30 +9,71 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Rock Music</h1>
-        <nav>
-            <ul class="nav justify-content-center flex-wrap">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="music.html">Music</a></li>
-                <li class="nav-item"><a class="nav-link" href="movies.html">Movies</a></li>
-                <li class="nav-item"><a class="nav-link" href="tvshows.html">TV Shows</a></li>
-                <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="bg-danger text-white py-3 mb-4">
+        <div class="container">
+            <h1 class="mb-3 text-center">Rock Music</h1>
+            <nav class="navbar navbar-expand-lg navbar-dark rounded">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav flex-wrap">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="music.html">Music</a></li>
+                            <li class="nav-item"><a class="nav-link" href="movies.html">Movies</a></li>
+                            <li class="nav-item"><a class="nav-link" href="tvshows.html">TV Shows</a></li>
+                            <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                            <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
     <main class="container">
         <section>
             <h2>Top Rock Bands</h2>
-            <ul>
-                <li>Queen</li>
-                <li>Foo Fighters</li>
-                <li>Linkin Park</li>
-                <li>Red Hot Chili Peppers</li>
-            </ul>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img src="Assets/Queen.webp" class="card-img-top" alt="Queen">
+                        <div class="card-body">
+                            <h5 class="card-title">Queen</h5>
+                            <p class="card-text">Legendary British rock band known for iconic hits like "Bohemian Rhapsody" and electrifying live performances.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img src="Assets/Foo Fighters.jfif" class="card-img-top" alt="Foo Fighters">
+                        <div class="card-body">
+                            <h5 class="card-title">Foo Fighters</h5>
+                            <p class="card-text">Founded by Dave Grohl, Foo Fighters deliver powerful rock anthems and energetic concerts worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img src="Assets/Linkin Park.jfif" class="card-img-top" alt="Linkin Park">
+                        <div class="card-body">
+                            <h5 class="card-title">Linkin Park</h5>
+                            <p class="card-text">A genre-blending band famous for their fusion of rock, rap, and electronic music, with hits like "In the End."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img src="Assets/Red Hot Chili Peppers.jfif" class="card-img-top" alt="Red Hot Chili Peppers">
+                        <div class="card-body">
+                            <h5 class="card-title">Red Hot Chili Peppers</h5>
+                            <p class="card-text">Funk-rock pioneers known for their energetic stage presence and songs like "Californication."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="mt-4">

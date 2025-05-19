@@ -7,6 +7,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/movies-drama.css">
+    <style>
+        body {
+            background: #181818;
+            color: #fff;
+        }
+        .card {
+            background: #232323;
+            color: #fff;
+            border: none;
+        }
+        .card-title, .card-text {
+            color: #fff;
+        }
+        header, footer {
+            background: #222;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -27,12 +45,44 @@
     <main class="container">
         <section>
             <h2>Top Drama Movies</h2>
-            <ul>
-                <li>The Shawshank Redemption</li>
-                <li>Forrest Gump</li>
-                <li>La La Land</li>
-                <li>Moonlight</li>
-            </ul>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img src="Assets/shawshank.jpg" class="card-img-top" alt="The Shawshank Redemption">
+                        <div class="card-body">
+                            <h5 class="card-title">The Shawshank Redemption</h5>
+                            <p class="card-text">A powerful story of hope and friendship set in a prison, following Andy Dufresne's journey to freedom and redemption.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img src="Assets/forrestgump.jpg" class="card-img-top" alt="Forrest Gump">
+                        <div class="card-body">
+                            <h5 class="card-title">Forrest Gump</h5>
+                            <p class="card-text">A heartwarming tale of an extraordinary man who witnesses and influences historic events with his simple kindness.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img src="Assets/lalaland.jpg" class="card-img-top" alt="La La Land">
+                        <div class="card-body">
+                            <h5 class="card-title">La La Land</h5>
+                            <p class="card-text">A vibrant musical about love, dreams, and sacrifices in Los Angeles, starring Emma Stone and Ryan Gosling.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img src="Assets/moonlight.jpg" class="card-img-top" alt="Moonlight">
+                        <div class="card-body">
+                            <h5 class="card-title">Moonlight</h5>
+                            <p class="card-text">An emotionally charged coming-of-age drama exploring identity, family, and love across three chapters of a man's life.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer>

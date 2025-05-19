@@ -9,30 +9,71 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Classical Music</h1>
-        <nav>
-            <ul class="nav justify-content-center flex-wrap">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="music.html">Music</a></li>
-                <li class="nav-item"><a class="nav-link" href="movies.html">Movies</a></li>
-                <li class="nav-item"><a class="nav-link" href="tvshows.html">TV Shows</a></li>
-                <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="bg-danger text-white py-3 mb-4">
+        <div class="container">
+            <h1 class="mb-3 text-center">Classical Music</h1>
+            <nav class="navbar navbar-expand-lg navbar-dark rounded">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav flex-wrap">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="music.html">Music</a></li>
+                            <li class="nav-item"><a class="nav-link" href="movies.html">Movies</a></li>
+                            <li class="nav-item"><a class="nav-link" href="tvshows.html">TV Shows</a></li>
+                            <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                            <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
     <main class="container">
         <section>
             <h2>Top Classical Composers</h2>
-            <ul>
-                <li>Ludwig van Beethoven</li>
-                <li>Wolfgang Amadeus Mozart</li>
-                <li>Johann Sebastian Bach</li>
-                <li>Frédéric Chopin</li>
-            </ul>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img src="Assets/Ludwig van Beethoven.jpg" class="card-img-top" alt="Ludwig van Beethoven">
+                        <div class="card-body">
+                            <h5 class="card-title">Ludwig van Beethoven</h5>
+                            <p class="card-text">A revolutionary German composer whose works, like the 9th Symphony, have shaped classical music forever.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img src="Assets/Wolfgang Amadeus Mozart.webp" class="card-img-top" alt="Wolfgang Amadeus Mozart">
+                        <div class="card-body">
+                            <h5 class="card-title">Wolfgang Amadeus Mozart</h5>
+                            <p class="card-text">A prolific and influential composer of the Classical era, known for his symphonies, operas, and concertos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img src="Assets/Johann Sebastian Bach.jfif" class="card-img-top" alt="Johann Sebastian Bach">
+                        <div class="card-body">
+                            <h5 class="card-title">Johann Sebastian Bach</h5>
+                            <p class="card-text">A master of Baroque music, Bach's compositions are celebrated for their intellectual depth and beauty.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img src="Assets/Frédéric Chopin.jpeg" class="card-img-top" alt="Frédéric Chopin">
+                        <div class="card-body">
+                            <h5 class="card-title">Frédéric Chopin</h5>
+                            <p class="card-text">A Polish composer and virtuoso pianist, Chopin is renowned for his expressive piano works and romantic style.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="mt-4">

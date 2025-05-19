@@ -6,6 +6,25 @@
     <title>Comedy Movies - For Entertain You</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/movies-comedy.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background: #181818;
+            color: #fff;
+        }
+        .card {
+            background: #232323;
+            color: #fff;
+            border: none;
+        }
+        .card-title, .card-text {
+            color: #fff;
+        }
+        header, footer {
+            background: #222;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,12 +45,44 @@
     <main class="container">
         <section>
             <h2>Top Comedy Movies</h2>
-            <ul>
-                <li>Superbad</li>
-                <li>The Hangover</li>
-                <li>Step Brothers</li>
-                <li>Mean Girls</li>
-            </ul>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img src="Assets/superbad.jpg" class="card-img-top" alt="Superbad">
+                        <div class="card-body">
+                            <h5 class="card-title">Superbad</h5>
+                            <p class="card-text">A hilarious coming-of-age comedy about two friends on a wild adventure before graduation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img src="Assets/hangover.jpg" class="card-img-top" alt="The Hangover">
+                        <div class="card-body">
+                            <h5 class="card-title">The Hangover</h5>
+                            <p class="card-text">A bachelor party in Las Vegas spirals out of control in this outrageous and unforgettable comedy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img src="Assets/stepbrothers.jpg" class="card-img-top" alt="Step Brothers">
+                        <div class="card-body">
+                            <h5 class="card-title">Step Brothers</h5>
+                            <p class="card-text">Two grown men become stepbrothers and turn family life into a series of ridiculous antics.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img src="Assets/meangirls.jpg" class="card-img-top" alt="Mean Girls">
+                        <div class="card-body">
+                            <h5 class="card-title">Mean Girls</h5>
+                            <p class="card-text">A witty teen comedy exploring high school cliques, drama, and the quest to fit in.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
